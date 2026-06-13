@@ -1,0 +1,25 @@
+{
+  "name": "medcare",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MedCare — School Medical Cabinet Management System",
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "dev:auth": "pnpm --filter @medcare/auth-service dev",
+    "dev:students": "pnpm --filter @medcare/students-service dev",
+    "dev:visits": "pnpm --filter @medcare/visits-service dev",
+    "dev:appointments": "pnpm --filter @medcare/appointments-service dev",
+    "dev:medications": "pnpm --filter @medcare/medications-service dev",
+    "dev:notifications": "pnpm --filter @medcare/notifications-service dev",
+    "dev:reports": "pnpm --filter @medcare/reports-service dev",
+    "dev:nurse-panel": "pnpm --filter @medcare/nurse-panel dev",
+    "dev:student-portal": "pnpm --filter @medcare/student-portal dev",
+    "dev:all-services": "pnpm --filter './services/*' dev"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

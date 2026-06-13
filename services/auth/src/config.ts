@@ -1,0 +1,22 @@
+import { z } from "zod";
+
+const EnvSchema = z.object({
+  PORT: z.coerce.number().default(4001),
+  DATABASE_URL: z.string().min(1),
+  JWT_SECRET: z.string().min(16),
+  JWT_REFRESH_SECRET: z.string().min(16),
+  ACCESS_TOKEN_TTL: z.string().default("15m"),
+  REFRESH_TOKEN_TTL: z.string().default("7d"),
+  REDIS_URL: z.string().default("redis://localhost:6379"),
+});
+
+export type Env = z.infer<typeof EnvSchema>;
+
+export function loadConfig(): Env {
+  const result = EnvSchema.safeParse(process.env);
+  if (!result.success) {
+    console.error("❌ Invalid environment variables:", result.error.format());
+    process.exit(1);
+  }
+  return result.data;
+}

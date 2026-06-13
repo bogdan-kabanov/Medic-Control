@@ -1,0 +1,13 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+}
+
+.main {
+  padding: 24px 32px;
+  background-color: #f8fafc;
+  overflow-y: auto;
+  min-width: 0;
+}

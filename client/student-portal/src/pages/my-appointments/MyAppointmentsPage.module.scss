@@ -1,0 +1,123 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.doctorType {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.priority {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.priorityEmergency {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.priorityHigh {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.priorityMedium {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.priorityLow {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.reason {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.dateTime {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.statusBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.statusPending {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.statusApproved {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.statusCompleted {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.statusCancelled {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+
+.error {
+  color: #ef4444;
+  padding: 16px;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  font-size: 14px;
+}

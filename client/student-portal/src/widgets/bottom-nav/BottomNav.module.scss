@@ -1,0 +1,48 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #fff;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  padding: 0 8px;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 500;
+  transition: color 0.15s;
+
+  &:hover {
+    color: #64748b;
+  }
+}
+
+.active {
+  color: #2563eb;
+}
+
+.icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.label {
+  font-size: 10px;
+}

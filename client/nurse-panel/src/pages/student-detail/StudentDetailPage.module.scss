@@ -1,0 +1,168 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.loading, .error {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+}
+
+.error { color: #ef4444; }
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 14px;
+  padding: 8px 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  &:hover { color: #2563eb; }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.meta {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.diseaseBadge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.none {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.medList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.medItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.medName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.medDosage {
+  font-size: 12px;
+  color: #64748b;
+  background: #dbeafe;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.counselorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.counselorName {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.counselorPhone {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  &:last-child { border-bottom: none; }
+}
+
+.infoLabel {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.infoValue {
+  font-size: 13px;
+  color: #1e293b;
+  font-weight: 500;
+}

@@ -1,0 +1,153 @@
+.sidebar {
+  background: #fff;
+  border-right: 1px solid #e2e8f0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.logoIcon {
+  font-size: 24px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 12px;
+}
+
+.section {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 16px 8px 8px;
+  margin: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.15s;
+
+  &:hover {
+    background-color: #f1f5f9;
+  }
+}
+
+.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+.langSwitcherWrapper {
+  margin-top: auto;
+  padding: 16px 12px;
+}
+
+.bottom {
+  margin-top: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.langSwitcherWrapper {
+  display: none;
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.userAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userRole {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: capitalize;
+}
+
+.logoutBtn {
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  &:hover { color: #ef4444; background: #fef2f2; }
+}
