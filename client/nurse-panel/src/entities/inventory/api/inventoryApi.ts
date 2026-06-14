@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { API_URLS } from "@/shared/config/api";
 
 export interface InventoryItem {
   id: string;
@@ -28,7 +29,7 @@ interface InventoryQuery {
 export const inventoryApi = createApi({
   reducerPath: "inventoryApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4005/api/v1",
+    baseUrl: API_URLS.medications,
     prepareHeaders: (headers) => {
       const token = sessionStorage.getItem("accessToken");
       if (token) headers.set("Authorization", `Bearer ${token}`);

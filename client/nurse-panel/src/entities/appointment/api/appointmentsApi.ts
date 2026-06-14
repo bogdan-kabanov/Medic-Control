@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { API_URLS } from "@/shared/config/api";
 
 export interface Appointment {
   id: string;
@@ -27,7 +28,7 @@ interface AppointmentsQuery {
 export const appointmentsApi = createApi({
   reducerPath: "appointmentsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4004/api/v1",
+    baseUrl: API_URLS.appointments,
     prepareHeaders: (headers) => {
       const token = sessionStorage.getItem("accessToken");
       if (token) headers.set("Authorization", `Bearer ${token}`);

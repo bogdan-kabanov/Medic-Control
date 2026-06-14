@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "@/app/store";
+import { API_URLS } from "@/shared/config/api";
 
 export interface Appointment {
   id: string;
@@ -16,7 +17,7 @@ export interface Appointment {
 export const studentAppointmentsApi = createApi({
   reducerPath: "studentAppointmentsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4004/api/v1",
+    baseUrl: API_URLS.appointments,
     prepareHeaders: (headers, { getState }) => {
       const state = getState() as RootState;
       if (state.auth.accessToken) {

@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { API_URLS } from "@/shared/config/api";
 
 export interface Visit {
   id: string;
@@ -37,7 +38,7 @@ interface PaginatedVisits {
 export const visitsApi = createApi({
   reducerPath: "visitsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4003/api/v1",
+    baseUrl: API_URLS.visits,
     prepareHeaders: (headers) => {
       const token = sessionStorage.getItem("accessToken");
       if (token) headers.set("Authorization", `Bearer ${token}`);

@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "@/app/store";
+import { API_URLS } from "@/shared/config/api";
 
 export interface StudentProfile {
   id: string;
@@ -18,7 +19,7 @@ export interface StudentProfile {
 export const profileApi = createApi({
   reducerPath: "profileApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4002/api/v1",
+    baseUrl: API_URLS.students,
     prepareHeaders: (headers, { getState }) => {
       const state = getState() as RootState;
       if (state.auth.accessToken) {

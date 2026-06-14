@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { API_URLS } from "@/shared/config/api";
 
 interface LoginRequest {
   email: string;
@@ -24,7 +25,7 @@ interface MeResponse {
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4001/api/v1/auth",
+    baseUrl: API_URLS.auth + "/auth",
     prepareHeaders: (headers, { getState }) => {
       const state = getState() as { auth: { accessToken: string | null } };
       if (state.auth.accessToken) {
